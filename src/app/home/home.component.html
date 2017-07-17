@@ -1,0 +1,36 @@
+<p class="text-primary">
+  home works!             
+</p>
+
+<p class="text-center text-success">ngIf Example Angular2</p>
+
+<div *ngIf="flag">
+<h2> If Works </h2>
+</div>
+
+<div *ngIf="!flag">
+<h2> Not Works </h2>
+</div>
+
+<button class="btn btn-info" (click)="changeFlagMethod()"> Change Flag</button>
+
+<button class="btn btn-info" (click)="flag=!flag"> Change Flag 2</button>
+
+<hr>
+
+<p class="text-center text-success">ngFor Example Angular2</p>
+
+<div class="well well-sm" *ngFor="let obj of arrayObj;let i=index">
+  <li>{{obj.name}}
+    <li>{{obj.location}}
+      <li>Index is : {{i}}
+        <div *ngFor="let o of obj.Skills">
+          <ul>
+              <li>{{o.techName}}
+          </ul>
+        </div>
+
+        <div *ngFor= "let str of arrayString">
+        <li>{{str}}
+        </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <h2>
+        {{title}}
+      </h2>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <a class='navbar-brand' href='#'>Demo App</a>
+        <ul class="nav navbar-nav">
+          <li> <a [routerLink]="['/home']"> Home  </a>
+            <li><a [routerLink]="['/about']"> About Me </a>
+              <li><a [routerLink]="['/contact']"> Contact Us </a>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="col-md-10">
+      <div class="well">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <ul>
+        <li><a [routerLink]="['/home','login']"  > LogIn </a>
+
+              <li><a [routerLink]="['/home','signup']"> SignUp </a>
+      </ul>
+    </div>
+
+   
+  </div>
+</div>
